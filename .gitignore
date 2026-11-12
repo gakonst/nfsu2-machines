@@ -1,0 +1,9 @@
+zig/zig
+zig/lib/
+zig/doc/
+zig/LICENSE
+zig/README.md
+.zig-cache/
+zig-out/
+node_modules/
+.wrangler/

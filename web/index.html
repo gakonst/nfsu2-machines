@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#07060d">
+<title>Midnight Machines</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="320" height="180"></canvas>
+  <canvas id="hud"></canvas>
+
+  <div id="touch" hidden>
+    <div class="pad left">
+      <button data-bit="4" aria-label="steer left">&#9664;</button>
+      <button data-bit="8" aria-label="steer right">&#9654;</button>
+    </div>
+    <div class="pad right">
+      <button data-bit="64" class="small" aria-label="shift down">&#9660;</button>
+      <button data-bit="32" class="small" aria-label="shift up">&#9650;</button>
+      <button data-bit="16" class="nos">NOS</button>
+      <button data-bit="2" class="brk">BRK</button>
+      <button data-bit="1" class="gas">GAS</button>
+    </div>
+    <button id="touch-pause" aria-label="pause">II</button>
+  </div>
+
+  <div id="menu">
+    <section id="home" class="screen">
+      <h1 class="title"><span>MIDNIGHT</span><span>MACHINES</span></h1>
+      <p class="tag">street racing after dark</p>
+      <div class="buttons">
+        <button id="go-single" class="big">Single race</button>
+        <button id="go-multi" class="big">Multiplayer</button>
+      </div>
+      <div id="keys" class="keys"></div>
+      <p id="load-msg" class="note"></p>
+    </section>
+
+    <section id="single" class="screen" hidden>
+      <h2>Single race</h2>
+      <div class="opts" id="single-opts"></div>
+      <div class="buttons row">
+        <button class="back">Back</button>
+        <button id="single-start" class="big hot">Race</button>
+      </div>
+    </section>
+
+    <section id="multi" class="screen" hidden>
+      <h2>Multiplayer</h2>
+      <label class="field">Your name <input id="mp-name" maxlength="16" autocomplete="nickname" spellcheck="false"></label>
+      <div class="buttons">
+        <button id="mp-create" class="big hot">Create a room</button>
+      </div>
+      <div class="join">
+        <input id="mp-code" maxlength="6" placeholder="CODE" autocomplete="off" spellcheck="false">
+        <button id="mp-join" class="big">Join</button>
+      </div>
+      <p class="note">Up to 4 drivers per room. Bots fill the grid.</p>
+      <div class="buttons row"><button class="back">Back</button></div>
+    </section>
+
+    <section id="lobby" class="screen" hidden>
+      <h2>Room <span id="lobby-code" class="code"></span></h2>
+      <p class="note" id="lobby-link"></p>
+      <ol id="lobby-players" class="players"></ol>
+      <div class="opts" id="lobby-opts"></div>
+      <p class="note" id="lobby-wait"></p>
+      <div class="buttons row">
+        <button id="lobby-leave">Leave</button>
+        <button id="lobby-start" class="big hot">Start race</button>
+      </div>
+    </section>
+
+    <section id="pause" class="screen" hidden>
+      <h2>Paused</h2>
+      <div class="buttons">
+        <button id="pause-resume" class="big hot">Resume</button>
+        <button id="pause-restart" class="big">Restart</button>
+        <button id="pause-quit" class="big">Quit to menu</button>
+      </div>
+    </section>
+  </div>
+
+  <div id="after" hidden>
+    <button id="after-again" class="big hot">Race again</button>
+    <button id="after-menu" class="big">Menu</button>
+  </div>
+
+  <div id="fuel" hidden></div>
+  <div id="toast" hidden></div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>

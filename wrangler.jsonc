@@ -1,0 +1,22 @@
+{
+  // Midnight Machines: the game's files (web/), multiplayer rooms and the Tempo fuel pump in one Worker.
+  "$schema": "./worker/node_modules/wrangler/config-schema.json",
+  "name": "midnight-machines",
+  "main": "worker/worker.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./web",
+    "binding": "ASSETS",
+    "run_worker_first": ["/room/*", "/mpp/*"]
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "ROOM", "class_name": "Room" },
+      { "name": "PUMP", "class_name": "Pump" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["Room", "Pump"] }
+  ]
+}
