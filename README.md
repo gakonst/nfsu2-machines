@@ -1,3 +1,18 @@
+# NFSU2 Machines: Need for Speed Underground 2 in the browser, with Tempo fuel
+
+A fork of [th0mk/nfsu2-web](https://github.com/th0mk/nfsu2-web) (MIT) that adds **Tempo fuel**: in a race you pay for
+the distance you drive with [MPP](https://mpp.dev) sessions on Tempo testnet. One session opens per race, a $0.001
+voucher buys 50 m, the page keeps 200 m paid ahead of the car, and the channel closes and settles when the race ends.
+Run out and the car crawls at 12 mph until the next voucher lands. See [docs/web/TEMPO_FUEL.md](docs/web/TEMPO_FUEL.md).
+
+Play with it: start the game server as below, run the fuel server (`node web/mpp/serve.ts 8787`, or deploy
+`web/mpp` as a Cloudflare Worker), and open `http://localhost:8080/?tempo=http://localhost:8787/mpp/`.
+
+Everything below is the upstream README. As upstream, this repository contains none of the game's code or data: you
+bring your own copy of the game.
+
+---
+
 # Need for Speed: Underground 2 in the browser
 
 > [!IMPORTANT]
