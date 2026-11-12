@@ -18,5 +18,9 @@
     "playwright": "^1.64.1",
     "typescript": "^7.0.2",
     "ws": "^8.22.0"
+  },
+  "dependencies": {
+    "mppx": "0.16.0",
+    "viem": "2.57.12"
   }
 }

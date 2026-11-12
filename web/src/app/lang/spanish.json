@@ -1659,5 +1659,6 @@
   "Street X: Parkade": "Calle X: Aparcamiento",
   "Join takes you to your friend: their world, their track and their car.": "«Unirse» te lleva con tu amigo: a su mundo, a su pista y justo detrás de su coche.",
   "{name} is in a part of the city your career hasn't opened yet.": "{name} está en una zona de la ciudad que aún no está disponible en tu modo carrera.",
-  "{name} could not be found in free roam.": "No se encontró a {name} en circulación libre."
+  "{name} could not be found in free roam.": "No se encontró a {name} en circulación libre.",
+  "Tempo fuel": "Tempo fuel"
 }

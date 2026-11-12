@@ -84,7 +84,7 @@ test('the keys, as players\' browsers keep them', () => {
     RADIO_MODES: 'nfsu2.radio.modes', RADIO_ON: 'nfsu2.radio.on', RADIO_NEXT: 'nfsu2.radio.next', RADIO_SHUFFLE: 'nfsu2.radio.shuffle',
     LASTFM_SESSION: 'nfsu2.lastfm', LASTFM_QUEUE: 'nfsu2.lastfm.queue', LASTFM_RESULT: 'nfsu2.lastfm.result',
     PHOTO_KEPT: 'nfsu2-photo', PHOTO_MARK: 'nfsu2-photo-mark', MESSAGES: 'nfsu2.msgs.',
-    TOUCH_STEERING: 'nfsu2-touch-steering', TOUCH_LEVEL: 'nfsu2-touch-level', TOUCH_NITRO: 'nfsu2-touch-nitro',
+    TEMPO_KEY: 'nfsu2.tempo.key', TOUCH_STEERING: 'nfsu2-touch-steering', TOUCH_LEVEL: 'nfsu2-touch-level', TOUCH_NITRO: 'nfsu2-touch-nitro',
     TOUCH_POSITION: 'nfsu2-touch-position', TOUCH_SIZE: 'nfsu2-touch-size', MENU_SIZE: 'nfsu2-menu-size',
     WHEEL: 'nfsu2.wheel.', SHIFTER: 'nfsu2.shifter.', ALTGR_CTRL: 'nfsu2.altgr-ctrl',
     KEYPHRASE: 'nfsu2-keyphrase:', CLOUD_OFFER: 'nfsu2-cloud-offer:', KEYPHRASE_KEPT: 'nfsu2-keyphrase-kept:',

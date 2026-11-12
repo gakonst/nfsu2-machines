@@ -96,6 +96,8 @@ enum {
     IEV_TRAVEL = 17,      /* the page menu's Tracks (travel.c travel_ask): dik = where, 0 the city, 1.. a race track's spot;
                              TRAVEL_FRIEND: the page menu's Friends, Join (travel_ask_friend): a = the friend's name's
                              hash (rc_room_hash), b = the spot it is at (0 the city) */
+    IEV_MPP = 18,         /* Tempo fuel (mppfuel.c mppfuel_input): dik = what, MPP_ON 1 / MPP_OFF 2 / MPP_PAID 3 with a =
+                             the metres of fuel paid in this race */
 };
 #define INAME_SEAT2 1u            /* IEV_NAME's flags: player 2's (co-op) */
 #define TRAVEL_FRIEND 100u        /* IEV_TRAVEL's where: to a friend */

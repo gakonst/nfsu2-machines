@@ -148,6 +148,9 @@ export interface InputSubsystem extends Subsystem {
   /** the page menu's Friends, Join: a trip to the friend whose name has this hash, at that spot (tracks.ts friendSpot,
    *  0 the city); false: it cannot reach the game */
   travelFriend?(name: number, spot: number): boolean;
+  /** Tempo fuel (runtime/mppfuel.c, mppfuel.ts): on, off, or the metres of fuel paid in this race; false: it cannot
+   *  reach the game */
+  mpp?(what: number, metres: number): boolean;
   /** a new name for free roam and Online mode, now (the operator took the old one away), or (seat2) for co-op's player 2
    *  in free roam; false: it cannot reach the game */
   name?(name: string, seat2?: boolean): boolean;

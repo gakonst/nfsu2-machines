@@ -1,0 +1,27 @@
+{
+  "name": "nfsu2-tempo-fuel",
+  "main": "worker.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "ORIGINS": "*"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "PUMP",
+        "class_name": "Pump"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "Pump"
+      ]
+    }
+  ]
+}

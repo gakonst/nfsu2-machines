@@ -1569,5 +1569,6 @@
   "Street X: Parkade": "Street X: Πάρκινγκ",
   "Join takes you to your friend: their world, their track and their car.": "Η «Συμμετοχή» σε πηγαίνει στον φίλο σου: στον κόσμο του, στην πίστα του και στο αυτοκίνητό του.",
   "{name} is in a part of the city your career hasn't opened yet.": "Ο παίκτης {name} είναι σε μέρος της πόλης που δεν έχει ξεκλειδωθεί ακόμα στην καριέρα σου.",
-  "{name} could not be found in free roam.": "Ο παίκτης {name} δεν βρέθηκε στην ελεύθερη οδήγηση."
+  "{name} could not be found in free roam.": "Ο παίκτης {name} δεν βρέθηκε στην ελεύθερη οδήγηση.",
+  "Tempo fuel": "Tempo fuel"
 }

@@ -1539,5 +1539,6 @@
   "Street X: Parkade": "ストリートX: 立体駐車場",
   "Join takes you to your friend: their world, their track and their car.": "「参加」でフレンドのところへ移動します: フレンドのワールド、コース、車のところまで。",
   "{name} is in a part of the city your career hasn't opened yet.": "{name}は、あなたのキャリアでまだ解放されていない街のエリアにいます。",
-  "{name} could not be found in free roam.": "フリーロームで{name}が見つかりませんでした。"
+  "{name} could not be found in free roam.": "フリーロームで{name}が見つかりませんでした。",
+  "Tempo fuel": "Tempo fuel"
 }

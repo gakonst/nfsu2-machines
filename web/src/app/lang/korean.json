@@ -1539,5 +1539,6 @@
   "Street X: Parkade": "스트리트 X: 주차 빌딩",
   "Join takes you to your friend: their world, their track and their car.": "'참가'를 누르면 친구에게 가요: 친구의 월드, 트랙, 차가 있는 곳으로.",
   "{name} is in a part of the city your career hasn't opened yet.": "{name} 님은 내 커리어에서 아직 열리지 않은 도시 지역에 있어요.",
-  "{name} could not be found in free roam.": "자유 주행에서 {name} 님을 찾지 못했어요."
+  "{name} could not be found in free roam.": "자유 주행에서 {name} 님을 찾지 못했어요.",
+  "Tempo fuel": "Tempo fuel"
 }

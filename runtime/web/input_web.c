@@ -485,6 +485,7 @@ static void lifecycle_poll(void){
 int mprace_owns_input(void);
 void sms_request(int id);
 void photo_input(int cmd, int a, int b);                 /* photo.c */
+void mppfuel_input(uint32_t what, int32_t a);            /* mppfuel.c */
 void travel_ask(int k);                                  /* travel.c */
 void travel_ask_friend(uint32_t name, int k);             /* travel.c */
 void roam_plat_name_piece(int off, int total, const char *b, int n);    /* roam_web.c */
@@ -530,6 +531,7 @@ static void handle(const InEv *e){
     case IEV_LOG: watchdog_log_download(); break;
     case IEV_SMS: sms_request(e->a); break;
     case IEV_PHOTO: photo_input(e->dik, e->a, e->b); break;
+    case IEV_MPP: mppfuel_input(e->dik, e->a); break;
     case IEV_TRAVEL:
         if (e->dik == TRAVEL_FRIEND) travel_ask_friend((uint32_t)e->a, (int)e->b);
         else travel_ask((int)e->dik);

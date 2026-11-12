@@ -1539,5 +1539,6 @@
   "Street X: Parkade": "Street X: อาคารจอดรถ",
   "Join takes you to your friend: their world, their track and their car.": "“เข้าร่วม” จะพาคุณไปหาเพื่อน: ไปยังโลก สนามแข่ง และรถของเพื่อน",
   "{name} is in a part of the city your career hasn't opened yet.": "{name} อยู่ในส่วนของเมืองที่ยังไม่เปิดในโหมดอาชีพของคุณ",
-  "{name} could not be found in free roam.": "ไม่พบ {name} ในการขับอิสระ"
+  "{name} could not be found in free roam.": "ไม่พบ {name} ในการขับอิสระ",
+  "Tempo fuel": "Tempo fuel"
 }

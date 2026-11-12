@@ -100,6 +100,8 @@ export const PHOTO_MARK = 'nfsu2-photo-mark';
 export const MESSAGES = 'nfsu2.msgs.';
 
 // the touch controls (touch.ts); each is also the name of the event its change sends
+/** Tempo fuel's testnet wallet key (mppfuel.ts): a page's own, funded from the faucet */
+export const TEMPO_KEY = 'nfsu2.tempo.key';
 export const TOUCH_STEERING = 'nfsu2-touch-steering';
 export const TOUCH_LEVEL = 'nfsu2-touch-level';
 export const TOUCH_NITRO = 'nfsu2-touch-nitro';

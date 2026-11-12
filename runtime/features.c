@@ -77,6 +77,7 @@ static void f_whine(CPU *c){ (void)c; whine_frame(); }
 static void f_carspot(CPU *c){ (void)c; carspot_frame(); }
 static void f_walls(CPU *c){ (void)c; walls_frame(); }
 static void f_savegame(CPU *c){ (void)c; savegame_frame(); }
+static void f_mppfuel(CPU *c){ (void)c; mppfuel_frame(); }
 /* the multiplayer feature: roam_game.c's, or in out/nfsu2_asipeer the Windows plugin under Unicorn (roam_asipeer.c) */
 static void f_roam_game(CPU *c){ if (!roam_asipeer_frame(c)) roam_game_frame(c); }
 
@@ -93,6 +94,7 @@ static const struct { const char *name; void (*frame)(CPU *c); } k_frames[] = {
     { "walls",       f_walls },                /* a car past the career's walls back on the roads it can reach */
     { "travel",      travel_frame },           /* Tracks: free roam on a race track's map (F9) and back */
     { "mprace",      mprace_frame },           /* a multiplayer race's trip from free roam and back */
+    { "mppfuel",     f_mppfuel },              /* Tempo fuel: a race's distance paid over MPP (the page's choice) */
     { "mpcredit",    mpcredit_frame },         /* a multiplayer race's win that waits for the crib */
     { "roam_game",   f_roam_game },            /* the multiplayer feature */
     { "racehorn",    racehorn_frame },         /* horns in races between players */

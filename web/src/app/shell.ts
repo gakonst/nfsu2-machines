@@ -36,6 +36,7 @@ import { TouchControls } from './touch';
 import { TextField } from './textentry';
 import { PauseHint } from './pausehint';
 import { TitleMark } from './titlemark';
+import { MppFuel } from './mppfuel';
 import { DriftPanel } from './drift';
 import { PhotoMode, photoMark } from './photo';
 import type { PadPage } from '../input/gamepad';
@@ -828,6 +829,7 @@ async function startGame() {
   pauseHint.start(session);
   titleMark.start(session);
   driftPanel.start(session);
+  mppFuel?.start(session);
   photo.start(session);
   friendPrompt.start(session, net && r.env.NFSU2_ROAM === '1');
   crewCountsOnce();
@@ -1018,6 +1020,7 @@ let touch: TouchControls;                // the controls on the game while a fin
 let textField: TextField;               // the field for a phone's keyboard while the game asks for text (textentry.ts)
 let pauseHint: PauseHint;               // the line to the page's menu under the game's pause menu (pausehint.ts)
 let titleMark: TitleMark;               // the site's address under the title screen's copyright (titlemark.ts)
+let mppFuel: MppFuel | null = null;   // Tempo fuel: a race paid over MPP, with ?tempo (mppfuel.ts)
 let driftPanel: DriftPanel;             // free roam's drift mode: its score under the game's Bank panel, a note at F2 (drift.ts)
 let photo: PhotoMode;                   // photo mode: F12 in the world, its panel and its keys (photo.ts)
 
@@ -1027,6 +1030,7 @@ function endStage() {
   pauseHint.stop();
   titleMark.stop();
   driftPanel.stop();
+  mppFuel?.stop();
   photo.stop();
   quickChat.stop();
   friendPrompt.stop();
@@ -2751,6 +2755,8 @@ export async function boot() {
   });
   titleMark = new TitleMark($('#stage'));
   driftPanel = new DriftPanel($('#stage'), { toast, wide: () => hudWide, log: logLine });
+  const tempo = new URLSearchParams(location.search).get('tempo');
+  if (tempo !== null) mppFuel = new MppFuel($('#stage'), { url: new URL(tempo || '/mpp/', location.href).href.replace(/\/?$/, '/'), log: logLine });
   photo = new PhotoMode($('#stage'), { shoot: () => screenshot(true), screenshot: () => void screenshot(), log: logLine });
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') { void checkNewer(); vault.shown(); } });
   setInterval(() => { if (document.visibilityState === 'visible') void checkNewer(); }, NEWER_EVERY_MS);

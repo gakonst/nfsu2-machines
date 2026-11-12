@@ -77,6 +77,8 @@ export const LB_NEXT = 1, LB_PRIVATE = 2, LB_LEAVE = 3, LB_JOIN = 4, LB_NEW = 5;
  *  TRAVEL_FRIEND: the page menu's Friends, Join (travel_ask_friend): a = the friend's name's hash (players.ts roomHash),
  *  b = the spot it is at (tracks.ts friendSpot, 0 the city) */
 export const IEV_TRAVEL = 17, TRAVEL_FRIEND = 100;
+/** Tempo fuel (runtime/mppfuel.c mppfuel_input): dik = what (mppfuel.ts MPP_*), a = the metres paid in this race */
+export const IEV_MPP = 18;
 
 export const IKF_REPEAT = 1;
 export const IKF_ALT = 2;

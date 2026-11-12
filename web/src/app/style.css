@@ -1513,3 +1513,9 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.64); }
 .fmbot:hover .fmbot-go { color: #fff; }
 /* /lastfm.html, the Last.fm popup's page, when the browser keeps the window open (lastfm-callback.ts) */
 .lastfm-closed { margin: 24px; }
+
+/* Tempo fuel (mppfuel.ts): what is paid ahead of the car, under the game's top-right HUD */
+.mpp-fuel { position: absolute; top: 96px; right: 16px; display: flex; flex-direction: column; gap: 4px; padding: 8px 12px;
+  border-radius: 12px; background: rgb(0 0 0 / 0.6); color: #fff; font: 600 14px/1.2 system-ui, sans-serif; pointer-events: none; }
+.mpp-fuel b { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
+.mpp-fuel.empty span { color: #ff5a4f; }

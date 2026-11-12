@@ -69,6 +69,7 @@ void carspot_frame(void);
 void walls_frame(void);
 void travel_frame(CPU *c);
 void mprace_frame(CPU *c);
+void mppfuel_frame(void);
 void mpcredit_frame(CPU *c);
 int  roam_asipeer_frame(CPU *c);           /* 1: the Windows plugin under Unicorn took roam_game_frame's place */
 void roam_game_frame(CPU *c);

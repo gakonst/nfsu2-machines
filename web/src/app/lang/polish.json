@@ -1689,5 +1689,6 @@
   "Street X: Parkade": "Street X: Parking piętrowy",
   "Join takes you to your friend: their world, their track and their car.": "„Dołącz” zabiera cię do znajomego: do jego świata, na jego tor i do jego samochodu.",
   "{name} is in a part of the city your career hasn't opened yet.": "{name} jest w części miasta, która nie jest jeszcze dostępna w twojej karierze.",
-  "{name} could not be found in free roam.": "Nie znaleziono gracza {name} na przejażdżce."
+  "{name} could not be found in free roam.": "Nie znaleziono gracza {name} na przejażdżce.",
+  "Tempo fuel": "Tempo fuel"
 }

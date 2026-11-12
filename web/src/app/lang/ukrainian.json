@@ -1689,5 +1689,6 @@
   "Street X: Parkade": "Стріт-X: Парковка",
   "Join takes you to your friend: their world, their track and their car.": "«Приєднатися» переносить вас до друга: у його світ, на його трасу й до його машини.",
   "{name} is in a part of the city your career hasn't opened yet.": "{name} їздить у частині міста, яка у вашій кар'єрі ще не відкрита.",
-  "{name} could not be found in free roam.": "Гравця {name} не вдалося знайти у вільній їзді."
+  "{name} could not be found in free roam.": "Гравця {name} не вдалося знайти у вільній їзді.",
+  "Tempo fuel": "Tempo fuel"
 }
