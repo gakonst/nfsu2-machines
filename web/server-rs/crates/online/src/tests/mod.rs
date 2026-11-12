@@ -4,6 +4,7 @@
 //! its cost (load.rs, ignored by default).
 
 mod audit;
+mod difftrace;
 mod claims;
 mod edge;
 mod load;

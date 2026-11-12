@@ -1,0 +1,24 @@
+[package]
+name = "nfsu2-lan-diff-http"
+description = "Test only: the server's HTTP rules (nfsu2-headers, nfsu2-ws's protocol pick, src/app's url.rs, etag.rs, settings_days.rs and manifest.rs, included as they are) driven from JSON lines, for web/worker's differential tests"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "difftrace-http"
+path = "src/main.rs"
+
+[dependencies]
+nfsu2-headers.workspace = true
+nfsu2-ws.workspace = true
+nfsu2-util.workspace = true
+serde_json.workspace = true
+hmac.workspace = true
+sha2.workspace = true
+parking_lot.workspace = true
+bytes.workspace = true
+futures-util.workspace = true
+flate2.workspace = true
+tokio.workspace = true

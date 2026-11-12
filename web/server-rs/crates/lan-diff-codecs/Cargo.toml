@@ -1,0 +1,12 @@
+[package]
+name = "nfsu2-lan-diff-codecs"
+description = "Test only: the switch's datagram codecs (crates/lan/src/compact.rs, fpred.rs, mix.rs, included as they are) driven from JSON lines, for web/worker's differential tests"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+bytes.workspace = true
+crc32fast.workspace = true
+serde_json.workspace = true

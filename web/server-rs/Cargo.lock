@@ -407,6 +407,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "lan-diff-timing"
+version = "0.1.0"
+dependencies = [
+ "bytes",
+ "lan-diff-timing-shim",
+ "nfsu2-names",
+ "parking_lot",
+ "serde_json",
+ "sha2",
+ "tokio",
+ "unicode-general-category",
+ "unicode-normalization",
+]
+
+[[package]]
+name = "lan-diff-timing-shim"
+version = "0.1.0"
+dependencies = [
+ "nfsu2-util",
+]
+
+[[package]]
 name = "lazy_static"
 version = "1.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -573,6 +595,32 @@ dependencies = [
  "tokio-util",
  "unicode-general-category",
  "unicode-normalization",
+]
+
+[[package]]
+name = "nfsu2-lan-diff-codecs"
+version = "0.1.0"
+dependencies = [
+ "bytes",
+ "crc32fast",
+ "serde_json",
+]
+
+[[package]]
+name = "nfsu2-lan-diff-http"
+version = "0.1.0"
+dependencies = [
+ "bytes",
+ "flate2",
+ "futures-util",
+ "hmac",
+ "nfsu2-headers",
+ "nfsu2-util",
+ "nfsu2-ws",
+ "parking_lot",
+ "serde_json",
+ "sha2",
+ "tokio",
 ]
 
 [[package]]

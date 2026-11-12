@@ -1,0 +1,33 @@
+// The Worker that serves NFSU2 in the browser on Cloudflare: the page (web/dist, the static assets), the game's
+// files (the R2 bucket GAME: docs/INTERNAL.md says what goes where) and the multiplayer server (the Switch Durable
+// Object).  Secrets (wrangler secret put): ETAG_KEY and LAN_ID_KEY, 32 random bytes as hex each.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nfsu2-machines",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  "durable_objects": {
+    "bindings": [{ "name": "SWITCH", "class_name": "Switch" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Switch"] }],
+  "r2_buckets": [{ "binding": "GAME", "bucket_name": "nfsu2-machines-game" }],
+  "assets": {
+    "directory": "../dist",
+    "binding": "ASSETS",
+    // every request reaches the Worker first, so every answer has the server's headers (COOP/COEP, CSP, caching)
+    "run_worker_first": true,
+    // exact files only: the Worker maps "/" to /index.html and answers 404 itself, as the Rust server does
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "vars": {
+    // the names the server answers for (the Rust server's --host, comma-separated; "*.zone" for one label under it);
+    // localhost always.  Set it to the Worker's own names.
+    "HOSTS": "nfsu2-machines.tempo-dev.workers.dev",
+    // "off": no Strict-Transport-Security (it is sent only over https, never for localhost or an IP literal)
+    "HSTS": "on",
+    // the Switch DO answers /names and /friends once the claimed names and the Online host are ported ("on")
+    "NAMES": "on",
+    "FRIENDS": "on"
+  }
+}

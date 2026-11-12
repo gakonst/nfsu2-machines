@@ -1,0 +1,23 @@
+# The Rust side of test/roam/difftrace_watch.mjs: the server's own watch.rs, results.rs and jumps.rs (by #[path], not
+# copied) and nfsu2-anticheat (by path), driven by a trace the node script writes.  Build outside the repo:
+#   CARGO_TARGET_DIR=/tmp/watchdiff-target cargo build --release --manifest-path web/worker/test/roam/rust-watch-diff/Cargo.toml
+[package]
+name = "watch-diff"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[workspace]
+
+[dependencies]
+nfsu2-anticheat = { path = "../../../../server-rs/crates/anticheat" }
+# (a stand-in with nfsu2-util's vip_str alone: the real crate pulls tokio and the rest)
+nfsu2-util = { path = "util-stub" }
+
+# (the server's release profile: web/server-rs/Cargo.toml)
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+debug = "line-tables-only"
+panic = "unwind"

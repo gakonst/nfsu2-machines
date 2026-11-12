@@ -1,0 +1,10 @@
+[package]
+name = "lan-diff-timing-shim"
+description = "Test only: nfsu2-util as the lan-diff-timing driver sees it (the real crate, with a clock and an RNG seed the driver sets), so the switch's timing modules replay deterministically"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+nfsu2-util.workspace = true

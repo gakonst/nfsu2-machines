@@ -1,0 +1,25 @@
+[package]
+name = "lan-diff-timing"
+description = "Test only: replays JSON cases through the switch's timing and stat modules (lag, away, paths, impair, store; util's bucket) and prints JSON lines, for web/worker's differential tests"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "lan-diff-timing"
+path = "src/main.rs"
+test = false
+
+[dependencies]
+# the modules are included by #[path] from crates/lan/src and crates/util/src, unchanged; nfsu2_util is the shim
+nfsu2-util = { package = "lan-diff-timing-shim", path = "../lan-diff-timing-shim" }
+nfsu2-names.workspace = true
+# test-util: the paused clock (start_paused) the impairment replays on
+tokio = { workspace = true, features = ["test-util"] }
+bytes.workspace = true
+parking_lot.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+unicode-normalization.workspace = true
+unicode-general-category.workspace = true
