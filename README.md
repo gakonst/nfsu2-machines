@@ -123,3 +123,18 @@ Built with the help of Claude Code.
 ## License
 
 MIT ([LICENSE](LICENSE)). *Need for Speed* and *Need for Speed: Underground 2* are trademarks of Electronic Arts Inc.
+
+## Multiplayer on Cloudflare Workers (this fork)
+
+`web/worker/` runs the multiplayer server on Cloudflare: the virtual LAN switch (`/lan`), the free-roam hub and
+the Online host, ported from `web/server-rs` to zero-dependency JavaScript and run by one Durable Object. The
+Worker also serves the page (`web/dist`) and the game's files from an R2 bucket you fill from your own copy
+(`web/worker/docs/INTERNAL.md`). The port is checked against the Rust crates by differential tests: seeded
+traces replayed into both, with every frame compared. Deterministic simulation tests run many virtual players
+over a lossy network. What differs is in `web/worker/docs/DEVIATIONS.md`.
+
+```sh
+cd web && npm ci && node build.mjs          # the page, into web/dist
+cd worker && npm i && npm test              # unit, differential (needs cargo) and DST tests
+npx wrangler deploy                         # needs: R2 bucket nfsu2-machines-game, secrets ETAG_KEY and LAN_ID_KEY
+```
